@@ -26,7 +26,7 @@ function Chat() {
   }, [roomId]);
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));
-  }, []);
+  }, [roomId]);
 
   const sendMessage = (e) => {
     e.preventDefault();
@@ -68,7 +68,6 @@ function Chat() {
             onChange={(e) => setInput(e.target.value)}
             type="submit"
             placeholder="Type a message"
-            type="text"
           />
           <button onClick={sendMessage}>send a message</button>
         </form>
